@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev src/index.ts",
+    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/index.ts",
+    "lint": "yarn eslint ./src && yarn tsc --noemit",
     "test": "jest",
     "build": "tsc",
     "fibo": "node dist/index.js"
